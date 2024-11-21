@@ -17,5 +17,14 @@ def is_palindrome(value):
 
     return "Palindrome"
 
-print(is_palindrome("Hello worLd"))
+import re
+
+# Alternative Solution
+def check_palindrome(phrase):
+    fowards = ''.join(re.findall(r'[a-z]+', phrase.lower()))
+    backwards = fowards[::-1]
+
+    return fowards == backwards
+
+print(check_palindrome("Hello-worLd"))
 print(is_palindrome("eye"))
