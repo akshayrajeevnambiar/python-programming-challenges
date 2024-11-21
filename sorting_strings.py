@@ -5,8 +5,6 @@
 import re
 
 def sort_words(phrase):
-    words = re.findall(r'[a-zA-Z]+', phrase)
-
-    return ' '.join(sorted(words, key= lambda s: s.casefold()))
+    return ' '.join(sorted(phrase.split(), key= str.casefold))
 
 print(sort_words("banana ORANGE apple"))
